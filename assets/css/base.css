@@ -19,7 +19,7 @@ ul{
 .container{
     width: calc( 100% - 120px );
     margin: auto;
-    background-color: yellowgreen;
+   
 }
 .row{
     display: flex;
