@@ -1,62 +1,111 @@
 @import './base.css';
-body{
+
+body {
     font-family: var(--mainFont);
     background-color: #eee;
 }
 
-.header{
+.header {
     background-color: #fff;
     padding: 12px;
 }
 
-.header .logo{
+.menu {
+    display: none;
+    text-align: center;
+    width: 70px;
+    color: var(--mainColor);
+}
+
+.header .logo {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 8px;
 }
 
-.header .logo img{
+.header .logo img {
     width: 35px;
 }
-.header .logo a{
- color: var(--mainColor);   
+
+.header .logo a {
+    color: var(--mainColor);
 }
 
-.nav ul{
+
+
+
+.nav ul {
+
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
-    
-    
-}
-.nav ul a{
-color: #101928;
+
+
 }
 
-.auth{
+.nav ul a {
+    color: #101928;
+}
+
+.auth {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
-   
+
 }
-.auth a{
+
+.auth a {
     font-family: var(--subFont);
-    border: 2px solid var(--mainColor) ;
+    border: 2px solid var(--mainColor);
 
-padding: 4px 30px;   
-border-radius: 10px;
+    padding: 4px 30px;
+    border-radius: 10px;
 }
 
-.auth .login{
+.auth .login {
 
-color: var(--mainColor);
-font-weight: 900;
+    color: var(--mainColor);
+    font-weight: 900;
 }
-.auth .register{
-    border: 2px solid var(--mainColor) ;
+
+.auth .register {
+    border: 2px solid var(--mainColor);
     color: white;
     background-color: var(--mainColor);
-    
+
 }
 
 
+@media screen and (max-width:992px) {
+    .nav ,
+    .auth{
+        display: none;
+    }
 
+    .menu {
+        display: block;
+        order: 2;
+    }
+    
+   
+}
+@media screen and (max-width:576px) {
+    .container{
+        width: calc( 100% - 5px );
+       
+       
+    }
+    .header .logo img {
+        width: 22px;
+    }
+    .header .logo a{
+        font-size: 11px;
+    }
+    .menu{
+        width: 40px;
+    }
+    
+   
+}
