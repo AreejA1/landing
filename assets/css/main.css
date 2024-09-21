@@ -17,14 +17,16 @@ body {
     color: var(--mainColor);
 }
 
-.header .logo {
+.header .logo,
+footer .logo {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 8px;
 }
 
-.header .logo img {
+.header .logo img,
+.footer-start .logo img{
     width: 35px;
 }
 
@@ -35,7 +37,7 @@ body {
 
 
 
-.nav ul {
+.navbar ul {
 
     display: flex;
     flex-wrap: wrap;
@@ -44,7 +46,7 @@ body {
 
 }
 
-.nav ul a {
+.navbar ul a {
     color: #101928;
 }
 
@@ -78,9 +80,9 @@ body {
 }
 
 
+
 @media screen and (max-width:992px) {
-    .nav ,
-    .auth{
+    .navbar {
         display: none;
     }
 
@@ -88,16 +90,19 @@ body {
         display: block;
         order: 2;
     }
-    
+  
    
 }
-@media screen and (max-width:576px) {
+@media screen and (max-width:580px) {
     .container{
         width: calc( 100% - 5px );
        
        
     }
-    .header .logo img {
+    .auth{
+        display: none;
+    }
+    .header .logo img{
         width: 22px;
     }
     .header .logo a{
@@ -106,6 +111,95 @@ body {
     .menu{
         width: 40px;
     }
-    
-   
 }
+
+.footer{
+    background-color: #393E46;
+    color: #fff;
+    
+    padding: 50px 0;
+}
+
+.footer a{
+    color: #fff;
+
+}
+.icons img{
+    border: #fff solid ;
+}
+
+.footer-start{
+   width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    }
+   .footer-end{
+        flex-grow: 1; 
+        display: flex;
+        flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    .footer-end .footer-item{
+        display: flex;
+       flex-wrap: wrap; 
+        flex-direction: column;
+        gap: 6px;
+        
+    }
+    .footer-end nav{
+        display: flex;
+       flex-wrap: wrap; 
+        flex-direction: column;
+        gap: 6px;
+        
+    }
+    @media screen and (max-width:576px) {
+       
+        .footer-start .logo {
+            width: 20px;
+        }
+      
+        .footer-start .logo a{
+            font-size: 8px;
+        }
+        
+    }
+
+    @media screen and (max-width:992px) {
+        
+    
+       
+       .footer.row{
+        gap: 10px;
+       }
+    .footer-start{
+            width: 100%;
+            text-align: center;
+           
+        }
+    .footer-end{
+            width: 100%;
+        }
+       
+    }
+    @media screen and (max-width :760px) {
+       
+       .footer-item{
+            width:  50% ;
+            margin-bottom:21px ;
+            
+        }
+        
+    }
+    @media screen and (max-width :400px) {
+       
+        .footer-item{
+             width:  100% ;
+             margin-bottom:21px ;
+             
+         }
+         
+     }
+   
